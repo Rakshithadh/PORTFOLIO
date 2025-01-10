@@ -1,0 +1,496 @@
+
+html, body {
+    height: 100%; /* Ensure html and body take up the full height of the viewport */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: lightblue;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: 200px;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: 15% 1fr; 
+    height: calc(100vh - 40px);
+}
+
+.sidebar {
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    padding: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 6px solid lightblue;
+}
+
+.main-content {
+    background-color: lightblue;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: flex-start; 
+    height: calc(100vh - 40px); 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.main-content p {
+    text-align: justify;
+    margin-left: 150px;
+    margin-right: 20px;
+    font-family: 'Arial, Helvetica, sans-serif'
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    color: black;
+}
+
+.nav-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px; /* Adjust size as needed */
+    margin-right: 10px; /* Adjust spacing between icon and text */
+    vertical-align: middle; /* Align icon vertically with text */
+}
+
+/* Adjustments for the navigation links */
+.sidebar ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+    width: 100%;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px; /* Add margin between list items */
+    text-align: left; /* Ensure text alignment */
+    font-size: 35px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    display: flex; /* Use flexbox for alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.sidebar ul li a:hover {
+    color: #007bff; /* Hover color */
+}
+
+.icons {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 150px;
+}
+
+.main-icon {
+    width: 80px; /* Adjust size as needed */
+    height: 80px; /* Adjust size as needed */
+    border-radius: 50%;
+    margin: 0 10px; /* Adjust spacing between icons */
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-start; /* Align button to the left */
+    margin-top: 50px; /* Add some space above the button */
+    margin-left: 150px;
+    gap: 20px;
+}
+
+.button-container button {
+    font-size: 30px;
+    border-radius: 60px;
+    padding: 10px 20px; /* Add padding to the button */
+    border: 2px solid #333; /* Add border to the button */
+    background-color: #fff; /* Set background color */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.button-container button:hover {
+    background-color: #007bff; /* Change background color on hover */
+    color: #fff; /* Change text color on hover */
+}
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 20% 1fr; /* Adjust sidebar width */
+    }
+
+    .main-content p {
+        margin-left: 100px; /* Adjust margin for main content */
+        margin-right: 20px;
+    }
+
+    .button-container {
+        margin-left: 100px; /* Adjust margin for button container */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 25% 1fr; /* Adjust sidebar width */
+    }
+
+    .main-content p {
+        margin-left: 50px; /* Adjust margin for main content */
+        margin-right: 20px;
+    }
+
+    .button-container {
+        margin-left: 50px; /* Adjust margin for button container */
+    }
+
+    .sidebar {
+        font-size: 20px; /* Adjust font size for sidebar */
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack sidebar and main content vertically */
+    }
+
+    .sidebar {
+        padding: 20px; /* Adjust padding for sidebar */
+        font-size: 18px; /* Adjust font size for sidebar */
+    }
+
+    .profile-photo {
+        width: 120px; /* Adjust size of profile photo */
+        height: 120px; /* Adjust size of profile photo */
+    }
+
+    .main-content {
+        font-size: 20px; /* Adjust font size for main content */
+        text-align: left; /* Adjust text alignment */
+    }
+
+    .main-content p {
+        margin-left: 20px; /* Adjust margin for main content */
+        margin-right: 20px;
+    }
+
+    .icons {
+        margin-left: 20px; /* Adjust margin for icons */
+    }
+
+    .button-container {
+        margin-left: 20px; /* Adjust margin for button container */
+        flex-direction: column; /* Stack buttons vertically */
+        align-items: flex-start; /* Align buttons to the start */
+    }
+
+    .button-container button {
+        width: 100%; /* Make buttons full width */
+        margin-bottom: 10px; /* Add margin between buttons */
+    }
+}
+
+
+
+
+
+
+
+.head h2{
+    text-align: center;
+    background-color: white;
+    padding: 0px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.details p{
+    font-size: 25px;
+    margin-left: 15px;
+    text-align: justify;
+    line-height: 1.5;
+    padding: none;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 1px;
+   
+}
+.skills ul li{
+    list-style-type: none;
+    text-align: left;
+    margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+    .details p {
+        font-size: 22px; /* Adjust font size for tablets */
+        margin-left: 10px; /* Adjust margin for tablets */
+    }
+
+    .skills ul li {
+        margin-left: 15px; /* Adjust margin for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .head h2 {
+        height: 45px; /* Adjust height for mobile */
+        margin-bottom: 4px; /* Adjust margin for mobile */
+    }
+
+    .details p {
+        font-size: 20px; /* Adjust font size for mobile */
+        margin-left: 8px; /* Adjust margin for mobile */
+    }
+
+    .skills ul li {
+        margin-left: 10px; /* Adjust margin for mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .head h2 {
+        height: 40px; /* Adjust height for small screens */
+        margin-bottom: 3px; /* Adjust margin for small screens */
+    }
+
+    .details p {
+        font-size: 18px; /* Adjust font size for small screens */
+        margin-left: 5px; /* Adjust margin for small screens */
+    }
+
+    .skills ul li {
+        margin-left: 8px; /* Adjust margin for small screens */
+    }
+}
+
+
+
+
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure projects are spaced evenly */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: lightblue; /* Ensure lightblue background is visible */
+    height: calc(100vh - 40px); /* Adjust height to fit viewport minus header */
+    overflow-y: auto; /* Enable vertical scrolling within the main content */
+}
+
+.project-box {
+    width: calc(50% - 10px); /* Two boxes per row with spacing */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.project-box:nth-child(even) {
+    margin-left: auto; /* Align even boxes to the right for zigzag effect */
+}
+
+.project-box h1 {
+    color: black;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+.project-box p {
+    color: black;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-box p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for last paragraph */
+}
+
+.project-box a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.project-box a:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .project-box {
+        width: calc(100% - 20px); /* Full width on smaller screens */
+    }
+
+    .project-box:nth-child(even) {
+        margin-left: 0; /* Remove right alignment on even boxes */
+    }
+}
+
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Ensure blogs are spaced evenly */
+    padding: 10px;
+    margin-top: 10px;
+    background-color: lightblue; /* Ensure lightblue background is visible */
+    height: calc(100vh - 40px); /* Adjust height to fit viewport minus header */
+    overflow-y: auto; /* Enable vertical scrolling within the main content */
+}
+
+.blog-box {
+    width: calc(50% - 10px); /* Two boxes per row with spacing */
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.blog-box:nth-child(even) {
+    margin-left: auto; /* Align even boxes to the right for zigzag effect */
+}
+
+.blog-box h3 {
+    color: black;
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.blog-box p {
+    color: black;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blog-box p:last-child {
+    margin-bottom: 0; /* Remove bottom margin for last paragraph */
+}
+
+.blog-box a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.blog-box a:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .project-box, .blog-box {
+        width: calc(100% - 20px); /* Full width on smaller screens */
+    }
+
+    .project-box:nth-child(even), .blog-box:nth-child(even) {
+        margin-left: 0; /* Remove right alignment on even boxes */
+    }
+}
+.contact ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact ul li {
+    margin-bottom: 15px;
+    overflow: auto; /* Ensure each list item contains floated elements */
+    font-size: 40px;
+}
+.contact ul li a {
+    color: black; /* Set link color to black */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for color and text-decoration */
+}
+
+.contact ul li a:hover {
+    color: black; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+}
+
+.contact ul li img {
+    width: 85px; /* Adjust size as needed */
+    height: 85px; /* Adjust size as needed */
+    border-radius: 50%; /* Rounded border */
+    margin-right: 10px; /* Optional: Add some margin between icons */
+    float: left; /* Align images to the left */
+    margin-left: 20px;
+}
+
+@media (max-width: 1024px) {
+    .contact ul li {
+        font-size: 35px; /* Adjust font size for tablets */
+    }
+
+    .contact ul li img {
+        width: 75px; /* Adjust size for tablets */
+        height: 75px; /* Adjust size for tablets */
+        margin-left: 15px; /* Adjust margin for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .contact ul li {
+        font-size: 30px; /* Adjust font size for mobile */
+    }
+
+    .contact ul li img {
+        width: 65px; /* Adjust size for mobile */
+        height: 65px; /* Adjust size for mobile */
+        margin-left: 10px; /* Adjust margin for mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .contact ul li {
+        font-size: 25px; /* Adjust font size for small screens */
+    }
+
+    .contact ul li img {
+        width: 55px; /* Adjust size for small screens */
+        height: 55px; /* Adjust size for small screens */
+        margin-left: 5px; /* Adjust margin for small screens */
+    }
+}

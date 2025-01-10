@@ -1,0 +1,34 @@
+{% extends 'portfolio/base.html' %}
+{%load static%}
+{% block content %}
+<body>
+<header>
+    <div class="head">
+        <h2>ABOUT</h2>
+    </div>
+</header>
+<div class="details">
+        <p>
+            I'm a computer science student studying in Jawaharlal Nehru New College of Engineering with a strong background in software development. 
+            I excel at developing efficient software solutions and managing projects. 
+            My expertise includes proficiency in programming languages C, Python, and Java; experience in full-stack web development and project management; skilled in Django framework and UI/UX design.
+            My passion for continuous learning and personal growth fuels my drive to stay ahead of industry trends and embrace new challenges. 
+            I am eager to collaborate with like-minded professionals and organizations that value creativity, integrity, and excellence.
+        </p>
+</div>
+<div class="skills">
+        <header>
+            <div class="head">
+                <h2>SKILLS</h2>
+            </div>
+        </header>
+        <ul>
+            {% for category_skills in skills %}
+                <li><strong>{{ category_skills.category }}</strong> : {% for skill in category_skills.skills %} {{ skill.name }},
+                    {% endfor %}</li>
+            
+            {% endfor %}
+        </ul>
+</div>
+</body>
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+    <header>
+        <div class="head">
+            <h2>CONTACT</h2>
+        </div>
+    </header>
+    <div class="contact">
+        <ul>
+            <li>
+                <img src="{% static 'images/phone.png' %}" alt="Icon 1"><p>+91 9980729320</p>
+            </li>
+            <li>
+                <img src="{% static 'images/email.png' %}" alt="Icon 2"><p><a href="mailto:rakshithadh1332@gmail.com">rakshithadh1332@gmail.com</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/l1.png' %}" alt="Icon 3"><p><a href="https://www.linkedin.com/in/rakshitha-d-h-842a3022a/">linkedin.com/in/Rakshithadh</a></p>
+            </li>
+            <li>
+                <img src="{% static 'images/l2.jpg' %}" alt="Icon 4"><p><a href="https://github.com/Rakshithadh">github.com/Rakshithadh</a></p>
+            </li>
+        </ul>
+    </div>
+</body>
+{% endblock %}

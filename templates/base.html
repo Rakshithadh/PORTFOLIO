@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+
+{% block content %}
+{% endblock %}
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const contentUrl = link.getAttribute('data-content');
+
+                fetch(contentUrl)
+                    .then(response => response.text())
+                    .then(html => {
+                        const mainContent = document.querySelector('.main-content');
+                        mainContent.innerHTML = html;
+                    })
+                    .catch(err => console.warn('Error loading content:', err));
+            });
+        });
+    });
+</script>
+</body>
+</html>

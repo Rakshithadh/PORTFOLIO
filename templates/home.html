@@ -1,0 +1,33 @@
+<!-- home.html -->
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="sidebar">
+        <a href="{% url 'home' %}">
+            <img src="{% static 'images/r1.jpg' %}" alt="Profile Photo" class="profile-photo">
+        </a>
+        <br>
+        <ul>
+            <li><a href="#" class="nav-link" data-content="{% url 'about' %}"><img src="{% static 'images/about.png' %}" alt="About Icon" class="nav-icon"> About</a></li>
+            <li><a href="#" class="nav-link" data-content="{% url 'projects' %}"><img src="{% static 'images/project.png' %}" alt="Projects Icon" class="nav-icon"> Projects</a></li>
+            <li><a href="#" class="nav-link" data-content="{% url 'blog' %}"><img src="{% static 'images/blog.png' %}" alt="Blog Icon" class="nav-icon"> Blog</a></li>
+            <li><a href="{% static 'files/cssyll.pdf' %}" target="_blank"><img src="{% static 'images/resume.png' %}" alt="Resume Icon" class="nav-icon"> Resume</a></li>
+            <li><a href="#" class="nav-link" data-content="{% url 'contact' %}"><img src="{% static 'images/contact.png' %}" alt="Contact Icon" class="nav-icon"> Contact</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1> Hi, I'm Rakshitha D H.</h1>
+        <p>I aim to secure an innovative and engaging role within a company that offers opportunities for continuous development, growth, and full utilization of my skill set, ultimately contributing to the organization's success and benefiting society.</p>
+        <div class="icons">
+            <a href="https://www.linkedin.com/in/rakshitha-d-h-842a3022a/"><img src="{% static 'images/l1.png' %}" alt="LinkedIn Icon 1" class="main-icon"></a>
+            <a href="https://github.com/Rakshithadh"><img src="{% static 'images/l2.jpg' %}" alt="LinkedIn Icon 2" class="main-icon"></a>
+        </div>
+        <div class="button-container">
+            <a href="#" class="nav-link" data-content="{% url 'about' %}"><button>Read More</button></a>
+            <a href="#" class="nav-link" data-content="{% url 'contact' %}"><button>Contact Me</button></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
